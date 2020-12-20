@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <style>
+        #spinner{
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+   
+    <div class="container-fluid" style="padding: 0px; color: #708090;">
+        
+        <div class="row justify-content-center">
+            <h1 style="padding: 70px;">対抗戦がしたいだろ〜　by [HsG]あそしーん</h1>
+        </div>
+        <div class="row justify-content-center">
+            <h4 style="display: none; color: #ff4000;" id="loginsuccess">:ログインしました({{email}})
+            </h4>        
+        </div>
+
+        
+
+        
+
+        <div class="row justify-content-center" style="padding: 50px; margin: 0px">
+            <h2 style="padding: 30px;">募集する</h2>
+
+        </div>
+        <div class="row justify-content-center" style="padding: 50px; margin: 0px">
+            <h3 style="color: orange; overflow: scroll;" onclick="window.scroll({
+                top: 1100,
+                behavior: 'smooth'
+              })"><u>{{ message }}</u></h3>
+
+        </div>
+        <form action="#" method="POST" id="mainform">
+        <div class="row justify-content-start" style="padding: 30px; margin: 0px">
+            <div class="col-sm-12 col-md-4" style="padding: 10px; margin: 0px;">
+                <label>ルール</label>
+                <select class="form-control" id="rule" name="rule">
+                    <option value="turf">縄張り</option>
+                    <option value="area">エリア</option>
+                    <option value="rainmaker">ほこ</option>
+                    <option value="tower">ヤグラ</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-2" style="padding: 10px; margin: 0px;">
+                <label>ウデマエ①</label>
+                <select class="form-control" name="rank1">
+                    <option value=15>A＋以下</option>
+                    <option value=16>A+</option>
+                    <option value=17>S</option>
+                    <option value=19>S＋前半</option>
+                    <option value=20>S+後半</option>
+                    <option value=21>XP21</option>
+                    <option value=22>XP22</option>
+                    <option value=23>XP23</option>
+                    <option value=24>XP24</option>
+                    <option value=25>XP25</option>
+                    <option value=26>XP26</option>
+                    <option value=27>XP27</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-2" style="padding: 10px; margin: 0px;">
+                <label>ウデマエ②</label>
+                <select class="form-control" name="rank2">
+                    <option value=15>A＋以下</option>
+                    <option value=16>A+</option>
+                    <option value=17>S</option>
+                    <option value=19>S＋前半</option>
+                    <option value=20>S+後半</option>
+                    <option value=21>XP21</option>
+                    <option value=22>XP22</option>
+                    <option value=23>XP23</option>
+                    <option value=24>XP24</option>
+                    <option value=25>XP25</option>
+                    <option value=26>XP26</option>
+                    <option value=27>XP27</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-2" style="padding: 10px; margin: 0px;">
+                <label>ウデマエ③</label>
+                <select class="form-control" name="rank3">
+                    <option value=15>A＋以下</option>
+                    <option value=16>A+</option>
+                    <option value=17>S</option>
+                    <option value=19>S＋前半</option>
+                    <option value=20>S+後半</option>
+                    <option value=21>XP21</option>
+                    <option value=22>XP22</option>
+                    <option value=23>XP23</option>
+                    <option value=24>XP24</option>
+                    <option value=25>XP25</option>
+                    <option value=26>XP26</option>
+                    <option value=27>XP27</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-2" style="padding: 10px; margin: 0px;">
+                <label>ウデマエ④</label>
+                <select class="form-control" name="rank4">
+                    <option value=15>A＋以下</option>
+                    <option value=16>A+</option>
+                    <option value=17>S</option>
+                    <option value=19>S＋前半</option>
+                    <option value=20>S+後半</option>
+                    <option value=21>XP21</option>
+                    <option value=22>XP22</option>
+                    <option value=23>XP23</option>
+                    <option value=24>XP24</option>
+                    <option value=25>XP25</option>
+                    <option value=26>XP26</option>
+                    <option value=27>XP27</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-6" style="padding: 10px; margin: 0px;">
+                <label>何先？</label>
+                <select class="form-control" name="nog">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="12">13</option>
+                    <option value="12">14</option>
+                    <option value="12">15</option>
+                    <option value="12">16</option>
+                    <option value="12">17</option>
+                    <option value="12">18</option>
+                    <option value="12">19</option>
+                    <option value="12">20</option>
+                    <option value="12">21</option>
+                    <option value="12">22</option>
+                    <option value="12">23</option>
+                </select>
+            </div>
+            <div class="col-sm-12 col-md-6" style="padding: 10px; margin: 0px">
+                <label>ステージ</label>
+                <select class="form-control" name="stage">
+                    <option value="random">おまかせ</option>
+                    <option value="randomlost">おまかせロスト</option>
+                    <option value="all">全ステ</option>
+                    <option value="thismonth">今月のエリアステージ</option>
+                </select>
+            </div> 
+            <div class="col-sm-12 col-md-12" style="padding: 10px; margin: 0px">
+                <div class="input-group" style="margin-top: 15px;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">フレコ</span>
+                    </div>
+                    <textarea class="form-control" aria-label="フレコ" form="mainform" name="friendcode"></textarea>
+                  </div>
+            </div>
+            <div class="col-sm-12 col-md-12" style="padding: 10px; margin: 0px;">
+                <div class="input-group" style="margin-top: 15px;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">備考</span>
+                    </div>
+                    <textarea class="form-control" aria-label="備考" form="mainform" name="note"></textarea>
+                  </div>
+            </div>
+            </div>
+            </div> 
+
+        </div>
+        <div class="row justify-content-center" style="padding: 10px; margin: 0px;">
+            <input type="submit" class="btn btn-primary btn-lg" style="margin-top: 10px; background-color: #D2691E;" value="募集">
+        </div>
+        <!-- <div class="row justify-content-center" id="spinner">  
+            <div class="spinner-grow" role="status" style="margin: 10px;">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <div class="spinner-grow" role="status" style="margin: 10px;">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <div class="spinner-grow" role="status" style="margin: 10px;">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <div class="spinner-grow" role="status" style="margin: 10px;">
+                <span class="sr-only">Loading...</span>
+              </div>
+        </div> -->
+    </form>
+        
+
+    <div class="row justify-content-center" style="padding: 40px; background-color: #6495ED; color: white" >
+        <h3 style="color: #DC143C; overflow: scroll;">{{ message }}</h3>
+    </div>
+    <div class="row justify-content-center" style="padding: 40px;background-color: #6495ED; color: white">
+        <div class="col-sm-12 col-md-4">
+            <h1>相手の情報</h1>
+        </div>
+        <div class="col-sm-12 col-md-8" style="padding: 40px;background-color: #6495ED; color: white">
+            <h2 style="padding: 40px;">Eメール：{{ similarmatch.email }}</h2>
+            <h2 style="padding: 40px;">ルール：
+                {% if similarmatch.rule == "turf"%}
+                ナワバリ
+                {% elif similarmatch.rule == "area" %}
+                エリア
+                {% elif similarmatch.rule == "rainmaker" %}
+                ホコ
+                {% elif similarmatch.rule == "tower" %}
+                ヤグラ
+                {% endif %}
+            </h2>
+            <h2 style="padding: 40px;">平均ウデマエ：{{ similarmatch.averagerank }}</h2>
+            <h2 style="padding: 40px;">試合数：{{ similarmatch.nog }}</h2>
+            <h2 style="padding: 40px;">ステージ：
+                {% if similarmatch.stage == "random"%}
+                おまかせ
+                {% elif similarmatch.stage == "randomlost" %}
+                おまかせロスト
+                {% elif similarmatch.stage == "all" %}
+                全ステ
+                {% elif similarmatch.stage == "thismonth" %}
+                今月
+                {% endif %}
+            </h2>
+            <h2 style="padding: 40px;">フレンドコート：{{ similarmatch.friendcode }}</h2>
+            <h2 style="padding: 40px;">備考：{{ similarmatch.note }}</h2>
+        </div>    
+    </div>
+    <!-- <h2>matches <br>
+        {% for match in matches %}
+        {{ match.id}}
+        {{match.email}}
+        {{ match.rule}}
+        {{match.averagerank}}
+        {{ match.nog}}
+        {{ match.stage}}
+        {{ match.friendcode}}
+        {{ match.note}}
+        <br>
+        <br>
+    {%endfor%}
+    </h2>
+    <h2>pairs<br>
+        {% for pair in pairs %}
+        {{pair.pair_id}}
+        <br>
+        {{ pair.email1}}
+        <br>
+        {{ pair.email2}}
+        <br>
+        {%endfor%}
+    </h2> -->
+        
+    </div>
+    <script>
+        var url = window.location.href
+        console.log(url)
+        var splittedurl = url.split("?")
+        var message = splittedurl[1]
+        if (message == "loginsuccess=true#"){
+            document.getElementById("loginsuccess").style.display = "block"
+        }
+ 
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <button type="button" class="btn btn-secondary btn-lg btn-block" style="position: sticky; bottom: 0; background-color: #191970;" onclick="document.location = 'aboutthiswebsite'">説明ページ</button>
+
+  </body>
+</html>
+
+       
+   
