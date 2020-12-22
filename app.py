@@ -165,7 +165,7 @@ def aboutthiswebsite():
 
 @app.route("/howtouse")
 def howtouse():
-    return render_template("使い方.html")
+    return render_template("howtouse.html")
 
 
 if __name__ == "__main__":
