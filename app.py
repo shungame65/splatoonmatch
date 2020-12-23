@@ -163,9 +163,9 @@ def home():
 def aboutthiswebsite():
     return render_template("aboutthiswebsite.html")
 
-@app.route("/howtouse")
-def howtouse():
-    return render_template("howtouse.html")
+# @app.route("/howtouse")
+# def howtouse():
+#     return render_template("howtouse.html")
 
 
 if __name__ == "__main__":
