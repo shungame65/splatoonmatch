@@ -77,6 +77,7 @@ def signup():
 def home():
     #is he loggedd in? 
     if "email" in session: 
+        numberofusers = users.query.count()
         # if yes, was the form sent? 
         if request.method == "POST": 
             if request.form["friendcode"] == '' or request.form["note"] == '':
@@ -154,7 +155,7 @@ def home():
                     return render_template("main.html", message="見つかりませんでした", similarmatch=None)
         #if no, just render template
         else: 
-            return render_template("main.html", email=session["email"], similarmatch=None)
+            return render_template("main.html", email=session["email"], similarmatch=None, numofusers = numberofusers)
     # if not please login 
     else: 
         return redirect(url_for("login"))
