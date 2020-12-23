@@ -134,8 +134,8 @@ def home():
                     db.session.commit()
                 
                     count = 0
-                    while count < 120: 
-                        time.sleep(5)
+                    while count < 26: 
+                        time.sleep(2)
                         inpairstable = pairs.query.filter_by(email2=session["email"]).first()
                         if inpairstable: 
                             opponentsemail = inpairstable.email1
@@ -147,7 +147,7 @@ def home():
                             dbpairs = pairs.query.all()
                             return render_template("main.html", matches=dbmatch, users=dbusers, pairs=dbpairs, similarmatch=similarmatch, message="マッチングしました。部屋たてとフレンド申請は相手が行います↓↓↓↓↓↓↓↓↓")
                         else:
-                            count += 10
+                            count += 2
                     db.session.delete(match)
                     db.session.commit()
 
