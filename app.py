@@ -134,7 +134,7 @@ def home():
                     db.session.commit()
                 
                     count = 0
-                    while count < 60: 
+                    while count < 120: 
                         time.sleep(5)
                         inpairstable = pairs.query.filter_by(email2=session["email"]).first()
                         if inpairstable: 
